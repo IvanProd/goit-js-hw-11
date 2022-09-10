@@ -6,8 +6,8 @@ const REQUEST_PARAMETERS = 'image_type=photo&orientation=horizontal&safesearch=t
 const refs = {
     body: document.querySelector('body'),
     form: document.querySelector('.search-form'),
-    input: document.querySelector('[name="serchQuery"]'),
+    input: document.querySelector('[name="searchQuery"]'),
     button: document.querySelector('[type="submit"]')
 };
-
+// console.log(refs.input)
 export {LINK_TO_BACK, ACCESS_KEY, REQUEST_PARAMETERS, refs}
