@@ -34,11 +34,12 @@ input{
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: 15px;
-    margin-left: 15px; */
+    margin-top: -15px;
+    margin-left: -15px;
 }
 
 .photo-card{
+    width: 455px;
     flex-basis: calc(100% / 4 - 20px);
     margin-top: 15px;
     margin-left: 15px;
@@ -49,7 +50,7 @@ input{
 }
 img{
     
-    width: 455px;
+    width: 100%;
     height: 300px;
 }
 .info{
