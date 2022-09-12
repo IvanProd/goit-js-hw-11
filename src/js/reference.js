@@ -7,7 +7,9 @@ const refs = {
     body: document.querySelector('body'),
     form: document.querySelector('.search-form'),
     input: document.querySelector('[name="searchQuery"]'),
-    button: document.querySelector('[type="submit"]')
+    button: document.querySelector('[type="submit"]'),
+    gallery: document.querySelector('.gallery')
+
 };
 // console.log(refs.input)
 export {LINK_TO_BACK, ACCESS_KEY, REQUEST_PARAMETERS, refs}
