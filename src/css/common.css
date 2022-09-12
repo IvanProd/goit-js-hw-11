@@ -1,4 +1,5 @@
 body{
+    
     margin: 0;
 }
 
@@ -24,4 +25,40 @@ input{
     margin: 0;
     text-align: center;
     border-bottom: 1px solid rgb(32, 95, 60);
+}
+
+.position{
+    text-align: center;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: 15px;
+    margin-left: 15px; */
+}
+
+.photo-card{
+    flex-basis: calc(100% / 4 - 20px);
+    margin-top: 15px;
+    margin-left: 15px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+img{
+    
+    width: 450px;
+    height: 300px;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.load-more{
+    margin: 15px 0;
+    align-self: center;
 }

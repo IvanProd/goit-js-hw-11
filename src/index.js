@@ -22,7 +22,7 @@ function loadContent(event){
             // console.log(markupElements(response.data))
             markupInGalleru.innerHTML = markupElements(response.data)
             //markupInGalleru.insertAdjacentHTML('beforeend', markupElements (response.data));
-            refs.body.insertAdjacentHTML('beforeend', btnLoad)
+            refs.section.insertAdjacentHTML('beforeend', btnLoad)
         });
     }
     catch(error){

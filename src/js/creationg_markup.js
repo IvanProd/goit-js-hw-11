@@ -24,21 +24,5 @@ function markupElements (data){
   return markup;
 };
 const btnLoad = `<button type="button" class="load-more">Load more</button>`
-// const markup = `<div class="photo-card">
-//                     <img src="${elements.webformatURL}" alt="${elements.tags}" loading="lazy" />
-//                     <div class="info">
-//                       <p class="info-item">
-//                         <b>Likes</b> ${elements.likes}
-//                       </p>
-//                       <p class="info-item">
-//                         <b>Views</b> ${elements.views}
-//                       </p>
-//                       <p class="info-item">
-//                         <b>Comments</b> ${elements.comments}
-//                       </p>
-//                       <p class="info-item">
-//                         <b>Downloads</b> ${elements.downloads}
-//                       </p>
-//                     </div>
-//                   </div>`
+
 export {markupElements, btnLoad}; 
