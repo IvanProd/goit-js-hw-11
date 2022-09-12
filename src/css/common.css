@@ -42,14 +42,14 @@ input{
     flex-basis: calc(100% / 4 - 20px);
     margin-top: 15px;
     margin-left: 15px;
-    border-top: 1px solid #000;
-    border-left: 1px solid #000;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-top: 1px solid rgb(55, 124, 46);
+    border-left: 1px solid rgb(55, 124, 46); 
+    border-right: 2px solid rgb(55, 124, 46);
+    border-bottom: 2px solid rgb(55, 124, 46);
 }
 img{
     
-    width: 450px;
+    width: 455px;
     height: 300px;
 }
 .info{
