@@ -3,7 +3,7 @@ import { Notify } from 'notiflix';
 import {reqesToServer} from './js/request_to_Back';
 import {markupElements} from './js/creationg_markup';
 
-
+//ЗРОБИТИ ЗАЬОРОНУ ВІКОНАННЯ ПОШУКУ ЯКЩО ШНПУТ НЕ ЗАПОВНЕНО!!!!!!!!!!!!!!!!!
 
 refs.button.addEventListener('click', loadContent);
 refs.input.addEventListener('input', enableButtonSearch)
