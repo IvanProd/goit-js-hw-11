@@ -4,7 +4,7 @@ function markupElements (data){
   const markup = elements.map(element => {
     // console.log(element.tags);
     return `<div class="photo-card">
-    <a href="">
+    <a href="${element.largeImageURL}">
       <img src="${element.webformatURL}" alt="${element.tags}" loading="lazy" />
     </a>
     <div class="info">
