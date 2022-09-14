@@ -2,9 +2,11 @@ function markupElements (data){
   const elements = data.hits;
   
   const markup = elements.map(element => {
-    console.log(element.tags);
+    // console.log(element.tags);
     return `<div class="photo-card">
-    <img src="${element.webformatURL}" alt="${element.tags}" loading="lazy" />
+    <a href="">
+      <img src="${element.webformatURL}" alt="${element.tags}" loading="lazy" />
+    </a>
     <div class="info">
       <p class="info-item">
         <b>Likes</b> ${element.likes}
@@ -23,6 +25,6 @@ function markupElements (data){
   }).join('');
   return markup;
 };
-const btnLoad = `<button type="button" class="load-more">Load more</button>`
 
-export {markupElements, btnLoad}; 
+
+export {markupElements}; 
