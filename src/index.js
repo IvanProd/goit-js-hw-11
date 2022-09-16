@@ -28,7 +28,7 @@ function loadContent(event){
                     );
                     return
                 }
-                massegNotEnougthHits(response)
+                
                 refs.gallery.innerHTML = markupElements(response.data);
                 refs.btnLoad.classList.remove('visually-hidden')
                 refs.button.setAttribute('disabled', true);
@@ -61,16 +61,20 @@ function nextContentLoad(event){
         if(response.data.hits.length === 0){
             return
         } 
-        massegNotEnougthHits(response)
+        
         refs.gallery.insertAdjacentHTML('beforeend', markupElements(response.data));
-        Notify.success(`Hooray! We found ${response.data.totalHits} images.`)
+        massegNotEnougthHits(response)
+        
     });
 };
 
 function massegNotEnougthHits(response){
     if(response.data.hits.length < 20){
         Notify.failure("We're sorry, but you've reached the end of search results")
+        refs.btnLoad.classList.add('visually-hidden')
+        return
     }
+    Notify.success(`Hooray! We found ${response.data.totalHits} images.`)
 }
 
 // function modalImgWindow(){}
