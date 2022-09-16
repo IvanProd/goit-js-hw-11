@@ -4,7 +4,7 @@ function markupElements (data){
   const markup = elements.map(element => {
     // console.log(element.tags);
     return `<div class="photo-card">
-    <a href="${element.largeImageURL}">
+    <a href="${element.largeImageURL}" id="modal">
       <img src="${element.webformatURL}" alt="${element.tags}" loading="lazy" />
     </a>
     <div class="info">
@@ -23,7 +23,10 @@ function markupElements (data){
     </div>
   </div>`
   }).join('');
+
   return markup;
+
+
 };
 
 
