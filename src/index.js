@@ -67,7 +67,6 @@ function nextContentLoad(event){
     }
     catch(error){
         console.log(error);
-        Notify.failure("We're sorry, but you've reached the end of search results")
     };
 
 };
