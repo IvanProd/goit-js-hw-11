@@ -30,6 +30,7 @@ function loadContent(event){
                 }
                 
                 refs.gallery.innerHTML = markupElements(response.data);
+                modalImgWindow()
                 refs.btnLoad.classList.remove('visually-hidden')
                 refs.button.setAttribute('disabled', true);
             });
@@ -63,6 +64,7 @@ function nextContentLoad(event){
         } 
         
         refs.gallery.insertAdjacentHTML('beforeend', markupElements(response.data));
+        modalImgWindow()
         massegNotEnougthHits(response)
         
     });
@@ -77,4 +79,7 @@ function massegNotEnougthHits(response){
     Notify.success(`Hooray! We found ${response.data.totalHits} images.`)
 }
 
-// function modalImgWindow(){}
+function modalImgWindow(){
+    let lightbox = new SimpleLightbox('.photo-card a', { captionDelay: 250, showCounter: true});
+    lightbox.refresh();
+}
