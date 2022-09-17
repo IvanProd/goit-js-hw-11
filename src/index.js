@@ -28,6 +28,7 @@ function loadContent(event){
                 
                 refs.gallery.innerHTML = markupElements(response.data);
                 modalImgWindow()
+                massegNotEnougthHits(response)
                 refs.btnLoad.classList.remove('visually-hidden')
                 refs.button.setAttribute('disabled', true);
             });
@@ -53,16 +54,22 @@ function nextContentLoad(event){
     const userInput = refs.input.value;
     countPages += 1;
     
-    reqesToServer(userInput, countPages).then(response => {
-        if(response.data.hits.length === 0){
-            return
-        } 
-        
-        refs.gallery.insertAdjacentHTML('beforeend', markupElements(response.data));
-        modalImgWindow()
-        massegNotEnougthHits(response)
-        
-    });
+    try{
+        reqesToServer(userInput, countPages).then(response => {
+            if(response.data.hits.length === 0){
+                return
+            } 
+            
+            refs.gallery.insertAdjacentHTML('beforeend', markupElements(response.data));
+            massegNotEnougthHits(response)
+            modalImgWindow()
+        });
+    }
+    catch(error){
+        console.log(error);
+        Notify.failure("We're sorry, but you've reached the end of search results")
+    };
+
 };
 
 function massegNotEnougthHits(response){
