@@ -12,8 +12,6 @@ refs.btnLoad.addEventListener('click', nextContentLoad)
 
 let countPages = 1;
 
-// console.log('countPages', countPages)
-
 function loadContent(event){
     event.preventDefault();
     const userInput = refs.input.value;
@@ -21,7 +19,6 @@ function loadContent(event){
     try{
         if (userInput != ''){
             reqesToServer(userInput, countPages).then(response => {
-                // console.log(typeof response.data.hits);
                 if(response.data.hits.length === 0){
                     Notify.failure(
                         'Sorry, there are no images matching your search query. Please try again.'
@@ -46,7 +43,6 @@ function loadContent(event){
 
 function enableButtonSearch(){
     if(refs.input.value === ''){
-        // console.log(refs.input.value);
         refs.button.removeAttribute('disabled');
         refs.btnLoad.classList.add('visually-hidden')
     };
@@ -56,9 +52,8 @@ function nextContentLoad(event){
     event.preventDefault();
     const userInput = refs.input.value;
     countPages += 1;
-    // console.log('countPages', countPages)
+    
     reqesToServer(userInput, countPages).then(response => {
-        // console.log(response.data.totalHits);
         if(response.data.hits.length === 0){
             return
         } 

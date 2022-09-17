@@ -13,5 +13,5 @@ const refs = {
     btnLoad: document.querySelector('.load-more')
 
 };
-// console.log(refs.input)
+
 export {LINK_TO_BACK, ACCESS_KEY, REQUEST_PARAMETERS, refs}

@@ -29,5 +29,4 @@ function markupElements (data){
 
 };
 
-
 export {markupElements}; 
